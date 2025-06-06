@@ -66,7 +66,7 @@
               <button class="step activeStep">General</button>
               <button class="step">LED</button>
               <button class="step">Optics</button>
-              <a class="step">Accessory</a>
+              <a class="step" id="acccessoryTabBtn">Accessory</a>
               <a class="step">Overview</a>
             </div>
           </div>
@@ -260,23 +260,9 @@
                   <div class="subCategoryContainer" id="variant">
                     <h3>Accessories</h3>
                     <div id="variantGrid">
-                      
                       <div class="variantItem">
-                        <div class="itemTickContainer">
-                          <img src="img/tick.png" class="tickImg">
-                        </div>
                         <div class="itemImageContainer accessorieImageContainer">
-
-                        </div>
-                        <h4>None</h4>
-                      </div>  
-
-                      <div class="variantItem">
-                        <div class="itemTickContainer activeTick">
-                          <img src="img/tick.png" class="tickImg">
-                        </div>
-                        <div class="itemImageContainer accessorieImageContainer activeContainer">
-                          <img src="img/visor.webp" class="itemImage accessorieImage">
+                          <img src="img/visor.png" class="accessorieImage">
                         </div>
                         <h4>Visor</h4>
                       </div>
@@ -366,5 +352,25 @@
         div.style.height = minHeight + 'px';
       }
     });
+
+    const object1 = document.getElementById("acccessoryTabBtn");
+    const object2 = document.getElementById("accessories");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            object1.classList.add("visible");
+          } else {
+            object1.classList.remove("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.5 
+      }
+    );
+
+    observer.observe(object2);
   </script>
 </html>

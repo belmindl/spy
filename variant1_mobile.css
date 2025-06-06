@@ -48,7 +48,7 @@ body {
 }
 
 .navMobileItemImg {
-    height: 40%;
+    height: 37%;
     width: auto;
 }
 
@@ -69,7 +69,6 @@ body {
 
 #modelContainer {
     height: auto;
-    aspect-ratio: 1/0.8;
     width: 100vw;
     position: sticky;
     z-index: 10;
@@ -210,6 +209,10 @@ h1 {
     z-index: 99;
 }
 
+#stepContainer::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 #stepsGrid {
     display: flex;
     width: 100%;
@@ -242,6 +245,10 @@ h1 {
     background-color: #E7E3E3;
     color: #000000;
     border-bottom: 2px solid #000000;
+}
+
+#accessoryTabBtn.visible {
+  background-color: tomato;
 }
 
 
@@ -335,7 +342,7 @@ h3 {
     top: 0px;
     right: 0px;
     z-index: 2;
-    width: 1rem;
+    width: 1.25rem;
     aspect-ratio: 1/1;
     background-color: #1b1b1b;
     display: flex;
@@ -367,6 +374,11 @@ h3 {
     background-color: #f7f7f7;
 }
 
+.accessorieImage {
+    height: 150%;
+   object-fit: cover;
+}
+
 .itemImageContainer:not(.activeContainer):hover {
     border: 2px solid #e7e7e7;
 }
@@ -382,7 +394,7 @@ h3 {
 }
 
 .accessorieImage {
-    height: 75%;
+    height: 100%;
     width: auto;
 }
 
@@ -425,7 +437,7 @@ h4 {
 #diameterGrid {
     display: grid;
     grid-template-columns: repeat(3, max-content);
-    grid-gap: 0.5rem;
+    grid-gap: 0.35rem;
 }
 
 .diameterBtn {
@@ -678,7 +690,7 @@ h4 {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 0.95rem;
+    font-size: 0.90rem;
 }
 
 .grey {

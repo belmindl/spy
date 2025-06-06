@@ -1,0 +1,1389 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#logoContainer {
+    position: fixed;
+    z-index: 99;
+    margin: 1.5rem 0rem 0rem 4rem;
+}
+
+#logoDesktop {
+    height: 2.85rem;
+}
+
+
+#navigationDesktop {
+    height: 72px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+}
+
+#inspirationNavBtn {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0rem 1.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+#productsNavBtn {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #98A4AE;
+    color: #000000;
+    padding: 0rem 1.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.whiteNavBtn {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    border: none;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 0rem 1.5rem;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    line-height: 1rem;
+}
+
+#locationGrid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 0.75rem;
+    padding: 0rem 1.5rem 0rem 2.5rem;
+    align-items: center;
+}
+
+#locationText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#location {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 0.75;
+}
+
+#language {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.75rem;
+}
+
+.squareNavBtn {
+    height: 100%;
+    aspect-ratio: 0.8/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.navImg {
+    height: 27%;
+}
+
+#navigationMobile {
+    display: none;
+}
+
+
+
+
+
+
+
+#bodyContainer {
+    width: 100%;
+    height: 100%;
+}
+
+#contentContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% auto;
+}
+
+#modelContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: #FAFAFA;
+    background: linear-gradient(45deg, rgba(250, 250, 250, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(235, 235, 235, 1) 100%);
+}
+
+#drawingContainer {
+    position: absolute;
+    z-index: 5;
+    bottom: 2rem;
+    left: 3.5rem;
+    background-color: #FFFFFF;
+    height: auto;
+    aspect-ratio: 1/1;
+    width: 10%;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#drawingImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+#openDrawingOverlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#drawingContainer:hover > #openDrawingOverlay {
+    display: flex;
+}
+
+#openDrawingImg {
+    height: 17.5%;
+    width: auto;
+}
+
+#spyContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#modelImg {
+    width: auto;
+    height: 55vh;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+#spyContainer:hover > #modelImg {
+    height: 56vh;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+#controlsContainer {
+    position: absolute;
+    z-index: 2;
+    bottom: 2rem;
+    right: 3.5rem;
+    height: 44px;
+    display: flex;
+}
+
+.controlBtn {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#scrollContainer {
+    background-color: #FFFFFF;
+}
+
+#scrollContent {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#topContainer {
+    margin-top: 72px;
+    width: 100%;
+    padding: 2rem 3.5rem;
+    padding-bottom: 0rem;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+#backBtn {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #606971;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+#stepContainer {
+    position: sticky;
+    top: 72px;
+    left: 0;
+    right: 0;
+    padding: 2rem 3.5rem 0rem 3.5rem;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #FFFFFF;
+    z-index: 99;
+}
+
+#stepsGrid {
+    display: flex;
+    width: 100%;
+    grid-gap: 3px;
+}
+
+.step {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 1rem 1.5rem;
+    width: max-content;
+    color: #777777;
+    border-bottom: 2px solid transparent;
+}
+
+.step:not(.activeStep):hover {
+    background-color: #ebe9e9;
+}
+
+.activeStep {
+    background-color: #E7E3E3;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+
+
+
+
+
+
+
+
+#listContainer {
+    height: max-content;
+}
+
+.categoryContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-gap: 2.5rem;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 2rem 3.5rem;
+}
+
+.categoryContainer:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+
+.specificItemName {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #969696;
+}
+
+.subCategoryContainer {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+.subCatSpan {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: #969696;
+}
+
+.subCatTitleGrid {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    align-items: center;
+    grid-gap: 0.75rem;
+}
+
+#variantGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 1.25rem;
+}
+
+.variantItem {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 0.75rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.itemTickContainer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.activeTick {
+    visibility: visible;
+}
+
+.tickImg {
+    height: 75%;
+    width: auto;
+}
+
+.itemImageContainer {
+    width: 100%;
+    aspect-ratio: 1/0.6;
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accessorieImageContainer {
+    background-color: #f7f7f7;
+}
+
+.itemImageContainer:not(.activeContainer):hover {
+    border: 2px solid #e7e7e7;
+}
+
+.activeContainer {
+    border: 2px solid #000000;
+}
+
+.itemImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.accessorieImage {
+    height: 75%;
+    width: auto;
+}
+
+h4 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+}
+
+.underSubContainer {
+    background-color: #f8f8f8;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1.25rem;
+}
+
+.underSubGrid {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+.subTitle {
+    color: #727272;
+}
+
+#mountingContainer {
+    border-top: 1px solid #e9e9e9;
+    padding-top: 1.25rem;
+    display: none;
+}
+
+#diameterGrid {
+    display: flex;
+    grid-gap: 0.5rem;
+}
+
+.diameterBtn {
+    padding: 1rem 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    background-color: #e7e3e3;
+    color: #000000;
+}
+
+.diameterBtn:not(.activeDiameter):hover {
+    background-color: #ebe9e9;
+}
+
+.activeDiameter {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#finish {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 2rem;
+}
+
+#finishGrid {
+    display: flex;
+    grid-gap: 0.5rem;
+}
+
+.finishContainer {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.finishItemContainer {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+
+.finishItemContainer:not(.activeFinish):hover {
+    border: 1px solid #b1b1b1;
+}
+
+.ring {
+    width: 2.5rem;
+}
+
+#ring {
+    margin-top: 1.25rem;
+}
+
+.activeFinish {
+    border: 2px solid #000000;
+}
+
+
+.finishImg {
+    height: 100%;
+}
+
+.finishContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.finishContainer .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.80rem;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.5rem 1rem; 
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 107%;
+  margin-left: -3rem;
+}
+
+.finishContainer:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+#overviewList {
+    height: max-content;
+}
+
+
+#optionsOverviewGrid {
+    display: flex;
+    flex-direction: column;
+}
+
+.subOptionsGrid {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eeeeee;
+    padding: 2rem 0rem;
+    grid-gap: 0.5rem;
+}
+
+.lastSubOptionGrid {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding: 2rem 0rem;
+    grid-gap: 0.5rem;
+}
+
+.optionGrid {
+    display: grid;
+    align-items: center;
+    grid-column-gap: 2rem;
+    grid-template-columns: 20% auto max-content;
+    background-color: #ffffff;
+}
+
+#overview {
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+
+#itemFilesContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+}
+
+#itemFilesOverview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.itemFile {
+    background-color: #f0f0f0;
+    padding: 0rem 1.5rem;
+    height: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.itemFile:hover {
+    background-color: #E7E3E3;
+}
+
+.itemFileImg {
+    height: 1.25rem;
+    width: auto;
+}
+
+
+
+#overviewContainer {
+    width: 100%;
+    padding: 2rem 3.5rem;
+    border-top: 1px solid #e9e9e9;
+    background-color: #FFFFFF;
+    position: sticky;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#productInfoOverview {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.25rem;
+    justify-content: flex-end;
+    height: max-content;
+}
+
+.productInfoText {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #969696;
+}
+
+.productCode {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+}
+
+#overviewMainBtns {
+    display: flex;
+}
+
+.overviewBtn {
+    padding: 1rem 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+
+.grey {
+    background-color: #98A4AE;
+    color: #000000;
+}
+
+.black {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+#logoContainer {
+    display: none;
+}
+
+#navigationDesktop {
+    display: none;
+}
+
+#navigationMobile {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto max-content;
+    height: 54px;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+#navMobileGrid {
+    display: flex;
+}
+
+.navMobileItem {
+    background-color: transparent;
+    outline: none;
+    height: 54px;
+    aspect-ratio: 1/1;
+}
+
+.navMobileItemImg {
+    height: 40%;
+    width: auto;
+}
+
+#contentContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    grid-template-rows: max-content max-content;
+}
+
+#modelContainer {
+    overflow: hidden;
+    height: 100%;
+    aspect-ratio: 1/0.9;
+    position: relative;
+    background: #FAFAFA;
+    background: linear-gradient(45deg, rgba(250, 250, 250, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(235, 235, 235, 1) 100%);
+}
+
+#spyContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#modelImg {
+    width: auto;
+    height: 60%;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+#spyContainer:hover > #modelImg {
+    height: 63%;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+#drawingContainer {
+    display: none;
+}
+
+#controlsContainer {
+    display: none;
+}
+
+.controlBtn {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+#scrollContainer {
+    background-color: #FFFFFF;
+}
+
+#scrollContent {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#topContainer {
+    margin-top: 72px;
+    width: 100%;
+    padding: 2rem 3.5rem;
+    padding-bottom: 0rem;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+#backBtn {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #606971;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+#stepContainer {
+    position: sticky;
+    top: 72px;
+    left: 0;
+    right: 0;
+    padding: 2rem 3.5rem 0rem 3.5rem;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #FFFFFF;
+    z-index: 99;
+}
+
+#stepsGrid {
+    display: flex;
+    width: 100%;
+    grid-gap: 3px;
+}
+
+.step {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 1rem 1.5rem;
+    width: max-content;
+    color: #777777;
+    border-bottom: 2px solid transparent;
+}
+
+.step:not(.activeStep):hover {
+    background-color: #ebe9e9;
+}
+
+.activeStep {
+    background-color: #E7E3E3;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+
+
+
+
+
+
+
+
+#listContainer {
+    height: max-content;
+}
+
+.categoryContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-gap: 2.5rem;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 2rem 3.5rem;
+}
+
+.categoryContainer:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+
+.specificItemName {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #969696;
+}
+
+.subCategoryContainer {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+.subCatSpan {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: #969696;
+}
+
+.subCatTitleGrid {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    align-items: center;
+    grid-gap: 0.75rem;
+}
+
+#variantGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 1.25rem;
+}
+
+.variantItem {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 0.75rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.itemTickContainer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.activeTick {
+    visibility: visible;
+}
+
+.tickImg {
+    height: 75%;
+    width: auto;
+}
+
+.itemImageContainer {
+    width: 100%;
+    aspect-ratio: 1/0.6;
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accessorieImageContainer {
+    background-color: #f7f7f7;
+}
+
+.itemImageContainer:not(.activeContainer):hover {
+    border: 2px solid #e7e7e7;
+}
+
+.activeContainer {
+    border: 2px solid #000000;
+}
+
+.itemImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.accessorieImage {
+    height: 75%;
+    width: auto;
+}
+
+h4 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+}
+
+.underSubContainer {
+    background-color: #f8f8f8;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1.25rem;
+}
+
+.underSubGrid {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+.subTitle {
+    color: #727272;
+}
+
+#mountingContainer {
+    border-top: 1px solid #e9e9e9;
+    padding-top: 1.25rem;
+    display: none;
+}
+
+#diameterGrid {
+    display: flex;
+    grid-gap: 0.5rem;
+}
+
+.diameterBtn {
+    padding: 1rem 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    background-color: #e7e3e3;
+    color: #000000;
+}
+
+.diameterBtn:not(.activeDiameter):hover {
+    background-color: #ebe9e9;
+}
+
+.activeDiameter {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#finish {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 2rem;
+}
+
+#finishGrid {
+    display: flex;
+    grid-gap: 0.5rem;
+}
+
+.finishContainer {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.finishItemContainer {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+
+.finishItemContainer:not(.activeFinish):hover {
+    border: 1px solid #b1b1b1;
+}
+
+.ring {
+    width: 2.5rem;
+}
+
+#ring {
+    margin-top: 1.25rem;
+}
+
+.activeFinish {
+    border: 2px solid #000000;
+}
+
+
+.finishImg {
+    height: 100%;
+}
+
+.finishContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.finishContainer .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.80rem;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.5rem 1rem; 
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 107%;
+  margin-left: -3rem;
+}
+
+.finishContainer:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+#overviewList {
+    height: max-content;
+}
+
+
+#optionsOverviewGrid {
+    display: flex;
+    flex-direction: column;
+}
+
+.subOptionsGrid {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eeeeee;
+    padding: 2rem 0rem;
+    grid-gap: 0.5rem;
+}
+
+.lastSubOptionGrid {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding: 2rem 0rem;
+    grid-gap: 0.5rem;
+}
+
+.optionGrid {
+    display: grid;
+    align-items: center;
+    grid-column-gap: 2rem;
+    grid-template-columns: 20% auto max-content;
+    background-color: #ffffff;
+}
+
+#overview {
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+
+#itemFilesContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+}
+
+#itemFilesOverview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.itemFile {
+    background-color: #f0f0f0;
+    padding: 0rem 1.5rem;
+    height: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.itemFile:hover {
+    background-color: #E7E3E3;
+}
+
+.itemFileImg {
+    height: 1.25rem;
+    width: auto;
+}
+
+
+
+#overviewContainer {
+    width: 100%;
+    padding: 2rem 3.5rem;
+    border-top: 1px solid #e9e9e9;
+    background-color: #FFFFFF;
+    position: sticky;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#productInfoOverview {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.25rem;
+    justify-content: flex-end;
+    height: max-content;
+}
+
+.productInfoText {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #969696;
+}
+
+.productCode {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+}
+
+#overviewMainBtns {
+    display: flex;
+}
+
+.overviewBtn {
+    padding: 1rem 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+
+.grey {
+    background-color: #98A4AE;
+    color: #000000;
+}
+
+.black {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+}

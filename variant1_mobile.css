@@ -322,6 +322,18 @@ h3 {
     padding: 0vw 5vw;
 }
 
+#lineContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#line {
+    width: 90vw;
+    height: 1px;
+    background-color: #EEEEEE;
+}
+
 #variantGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -461,8 +473,7 @@ h4 {
 }
 
 #finish {
-    border-bottom: 1px solid #eeeeee;
-    padding: 0vw 0vw 5vw 0vw;
+    padding: 0vw 0vw 0vw 0vw;
 }
 
 #finishGrid {

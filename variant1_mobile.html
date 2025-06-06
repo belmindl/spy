@@ -33,6 +33,7 @@
     </div>
 
 
+
     <div id="bodyContainer">
         <div id="modelContainer">
             <div id="drawingContainer">
@@ -343,4 +344,29 @@
     </div>
 
   </body>
+
+  <script>
+    const div = document.getElementById('modelContainer');
+    const defaultHeight = 400;
+
+    function getMinHeight() {
+      const width = div.offsetWidth;
+      return width * 0.4; // Enforce 1 / 0.4 aspect ratio (2.5)
+    }
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const minHeight = getMinHeight();
+
+      if (scrollY <= 100) {
+        // Linearly interpolate height between defaultHeight and minHeight
+        const progress = scrollY / 100; // 0 to 1
+        const newHeight = defaultHeight - (defaultHeight - minHeight) * progress;
+        div.style.height = newHeight + 'px';
+      } else {
+        // Lock to minHeight after 100px
+        div.style.height = minHeight + 'px';
+      }
+    });
+  </script>
 </html>

@@ -69,7 +69,7 @@ body {
 
 #modelContainer {
     height: auto;
-    aspect-ratio: 1/0.9;
+    aspect-ratio: 1/0.8;
     width: 100vw;
     position: relative;
     background: #FAFAFA;
@@ -180,7 +180,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     color: #606971;
     text-decoration: none;
 }
@@ -196,7 +196,7 @@ h1 {
 
 #stepContainer {
     position: sticky;
-    top: 72px;
+    top: 0px;
     left: 0;
     right: 0;
     width: 100vw;
@@ -224,7 +224,7 @@ h1 {
     font-weight: 700;
     font-style: normal;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     padding: 1rem 1.5rem;
     width: max-content;
     color: #777777;
@@ -244,6 +244,363 @@ h1 {
 
 
 
+
+
+
+#listContainer {
+    height: max-content;
+    overflow-x: hidden;
+}
+
+.categoryContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-gap: 2.5rem;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.categoryContainer:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.90rem;
+}
+
+.specificItemName {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #969696;
+}
+
+.subCategoryContainer {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+.subCatSpan {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: #969696;
+}
+
+.subCatTitleGrid {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    align-items: center;
+    grid-gap: 0.75rem;
+    padding: 0vw 5vw;
+}
+
+#variantGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 1.25rem;
+    padding: 0vw 5vw;
+}
+
+.variantItem {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 0.75rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.itemTickContainer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 1rem;
+    aspect-ratio: 1/1;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.activeTick {
+    visibility: visible;
+}
+
+.tickImg {
+    height: 75%;
+    width: auto;
+}
+
+.itemImageContainer {
+    width: 100%;
+    aspect-ratio: 1/0.6;
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accessorieImageContainer {
+    background-color: #f7f7f7;
+}
+
+.itemImageContainer:not(.activeContainer):hover {
+    border: 2px solid #e7e7e7;
+}
+
+.activeContainer {
+    border: 2px solid #000000;
+}
+
+.itemImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.accessorieImage {
+    height: 75%;
+    width: auto;
+}
+
+h4 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+}
+
+.underSubContainer {
+    background-color: #f8f8f8;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1.25rem;
+}
+
+.underSubGrid {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-row-gap: 1rem;
+}
+
+.subTitle {
+    color: #727272;
+}
+
+#mountingContainer {
+    border-top: 1px solid #e9e9e9;
+    padding-top: 1.25rem;
+    display: none;
+}
+
+#diameterGrid {
+    display: flex;
+    grid-template-columns: repeat(3, max-c);
+    grid-gap: 0.5rem;
+}
+
+.diameterBtn {
+    padding: 1rem 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.90rem;
+    background-color: #e7e3e3;
+    color: #000000;
+}
+
+.diameterBtn:not(.activeDiameter):hover {
+    background-color: #ebe9e9;
+}
+
+.activeDiameter {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#finish {
+    border-bottom: 1px solid #eeeeee;
+    padding: 5vw;
+}
+
+#finishGrid {
+    display: flex;
+    grid-gap: 0.5rem;
+    overflow-x: scroll;
+    padding: 0vw 5vw;
+}
+
+.finishContainer {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    padding: 0vw;
+}
+
+.finishItemContainer {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+
+.finishItemContainer:not(.activeFinish):hover {
+    border: 1px solid #b1b1b1;
+}
+
+.ring {
+    width: 2.5rem;
+}
+
+#ring {
+    margin-top: 1.25rem;
+}
+
+.activeFinish {
+    border: 2px solid #000000;
+}
+
+
+.finishImg {
+    height: 100%;
+}
+
+.finishContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.finishContainer .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.80rem;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.5rem 1rem; 
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 107%;
+  margin-left: -3rem;
+}
+
+.finishContainer:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+#overviewList {
+    height: max-content;
+}
+
+
+#optionsOverviewGrid {
+    display: flex;
+    flex-direction: column;
+}
+
+.subOptionsGrid {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eeeeee;
+    padding: 5vw 0vw;
+    grid-gap: 0.5rem;
+}
+
+.lastSubOptionGrid {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding: 2rem 0rem;
+    grid-gap: 0.5rem;
+}
+
+.optionGrid {
+    display: grid;
+    align-items: center;
+    grid-column-gap: 2rem;
+    grid-template-columns: 20% auto max-content;
+    background-color: #ffffff;
+}
+
+#overview {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    padding: 5vw 5vw;
+}
+
+#itemFilesContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+}
+
+#itemFilesOverview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.itemFile {
+    background-color: #f0f0f0;
+    padding: 0rem 1.5rem;
+    height: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.90rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+.itemFile:hover {
+    background-color: #E7E3E3;
+}
+
+.itemFileImg {
+    height: 1.25rem;
+    width: auto;
+}
 
 
 
